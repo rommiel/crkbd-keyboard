@@ -317,28 +317,28 @@ static void print_status_narrow(void) {
         oled_write_raw_P(windows_logo, sizeof(windows_logo));
     }
 
-    oled_set_cursor(0,4);
-    oled_write("LAYER", false);
+    // oled_set_cursor(0,4);
+    // oled_write("LAYER", false);
 
     oled_set_cursor(0,5);
     switch (get_highest_layer(layer_state)) {
         case _QWERTY:
-            oled_write("Base ", false);
+            oled_write("BASE ", false);
             break;
         case _RAISE:
-            oled_write("Raise", false);
+            oled_write("RAISE", false);
             break;
         case _LOWER:
-            oled_write("Lower", false);
+            oled_write("LOWER", false);
             break;
         case _ADJUST:
-            oled_write("Adjst", false);
+            oled_write("ADJST", false);
             break;
         case _GAMING:
-            oled_write("Game ", false);
+            oled_write("GAME ", false);
             break;
         default:
-            oled_write("Undef", false);
+            oled_write("UNDEF", false);
     }
 
 
